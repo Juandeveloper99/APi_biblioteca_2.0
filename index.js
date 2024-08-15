@@ -12,8 +12,9 @@ import autoresRouter from './routes/autores/autoresRoutes.js';
 import librosRouter from './routes/libros/librosRoutes.js';
 import GeneroRouter from "./routes/genero/generoRoutes.js";
 import UsuarioRouter from './routes/usuario/usuarioRoutes.js';
-import guardadoRouter from './routes/guardado/guardadoRoutes.js';
+
 import favoritoRouter from './routes/favorito/favoritoRoutes.js';
+import GuardadosRouter from './routes/guardado/guardadoRoutes.js';
 
 
 
@@ -44,9 +45,10 @@ const port = 3000;
 app.use('/auth', authRouter); // AUTH
 app.use('/libros', librosRouter); // LIBROS
 app.use('/autores', autoresRouter); // AUTORES
+app.use('/Guardado', GuardadosRouter);
 app.use('/Genero', GeneroRouter);
 app.use('/usuario', UsuarioRouter);
-app.use('/guardado', guardadoRouter);
+
 app.use('/favorito', favoritoRouter);
 
 
