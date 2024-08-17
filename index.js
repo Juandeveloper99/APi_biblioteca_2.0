@@ -12,9 +12,11 @@ import autoresRouter from './routes/autores/autoresRoutes.js';
 import librosRouter from './routes/libros/librosRoutes.js';
 import GeneroRouter from "./routes/genero/generoRoutes.js";
 import UsuarioRouter from './routes/usuario/usuarioRoutes.js';
-
 import favoritoRouter from './routes/favorito/favoritoRoutes.js';
 import GuardadosRouter from './routes/guardado/guardadoRoutes.js';
+import topRouter from './routes/top/topRoutes.js';
+import destacadosRouter from './routes/destacados/destacadosRoutes.js';
+import recientesRouter from './routes/recientes/recientesRoutes.js';
 
 
 
@@ -48,8 +50,10 @@ app.use('/autores', autoresRouter); // AUTORES
 app.use('/Guardado', GuardadosRouter);
 app.use('/Genero', GeneroRouter);
 app.use('/usuario', UsuarioRouter);
-
 app.use('/favorito', favoritoRouter);
+app.use('/top', topRouter);
+app.use('destacados', destacadosRouter); // AUTORES
+app.use('/recientes', recientesRouter); // LIBROS
 
 
 // Levantar el servidor en el puerto 3000
